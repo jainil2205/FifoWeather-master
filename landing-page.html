@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" class="light-theme">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/general-style.css">
+        <link rel="stylesheet" href="./css/landing-page.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+        <title>FifoWeather Landing Page</title>
+    </head>
+    <body onload="removeLoadingAnimation();" class="no-overflow">
+        <div class="loading">
+            <div class='wrapper'>
+                <div class='icon'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </div>
+                <div class='icon'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-cloud"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+                </div>
+                <div class='icon'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-cloud-drizzle"><line x1="8" y1="19" x2="8" y2="21"></line><line x1="8" y1="13" x2="8" y2="15"></line><line x1="16" y1="19" x2="16" y2="21"></line><line x1="16" y1="13" x2="16" y2="15"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="12" y1="15" x2="12" y2="17"></line><path d="M20 16.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25"></path>
+                    </svg>
+                </div>
+                <div class='icon'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-cloud-lightning"><path d="M19 16.9A5 5 0 0 0 18 7h-1.26a8 8 0 1 0-11.62 9"></path><polyline points="13 11 9 17 15 17 11 23"></polyline>
+                    </svg>
+                </div>
+                <p>Loading...</p> 
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <header>
+                <h1>FifoWeather</h1>
+                
+                <div class="hamburger">
+                    <div class="line"></div>
+                </div>
+    
+                <div class="right">
+                    <div class="btn-slider">
+                        <div class="btn selected light">
+                            <img src="./assets/img/icons/light-theme.svg" alt="dark theme" class="theme-icon" id="drk-theme-icon">
+                        </div>
+                        <div class="btn">
+                            <img src="./assets/img/icons/dark-theme.svg" alt="dark theme" class="theme-icon" id="lgt-theme-icon">
+                        </div>
+                        
+                        <div class="selected-btn"></div>
+                    </div>
+    
+                    <div class="lang">
+                        <img src="./assets/img/icons/language.png" alt="lang icon" class="lang-icon">
+                        <ul>
+                            <li class="selected" value="en">
+                                <img src="./assets/img/icons/uk.png" alt="english">
+                                <p>English</p>
+                            </li>
+                            <li value="it">
+                                <img src="./assets/img/icons/italy.png" alt="italian">
+                                <p>Italian</p>
+                            </li>
+                            <li value="es">
+                                <img src="./assets/img/icons/spain.png" alt="spanish">
+                                <p>Spanish</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+    
+            <main>
+                <div class="text" data-aos="fade-right">
+                    <h1>
+                        Rapid and accurate <br>
+                        forecastest weather
+                    </h1>
+                    <h3>Find out world wide weather forecast</h3>
+    
+                    <a href="./index.html" class="try-it" target="_blank" rel="noopener noreferrer">
+                        <h2>Try it now for free</h2>
+                        <img src="./assets/img/icons/arrow-right.svg" alt="arrow" class="svg">
+                    </a>
+                </div>
+    
+                <div class="weather-example" data-aos="fade-left">
+                    <img src="./assets/img/weather/sun-rain.png" alt="bg-w">
+                    <img src="./assets/img/weather/thunder.png" alt="bg-w">
+                    <img src="./assets/img/weather/night-lil-cloudy.png" alt="bg-w">
+
+                    <div class="data">
+                        <div class="info">
+                            <p></p>
+                            <h2 class="city"></h2>
+                        </div>
+                        <img src="" alt="weather" id="weather-img">
+
+                        <div class="info">
+                            <h2 class="temp"></h2>
+                            <h2 class="weather"></h2>
+                        </div>
+                    </div>
+
+                    <div class="bg"></div>
+                </div>
+            </main>
+    
+            <div class="services" id="services">
+                <h2 data-aos="fade-right">What we offer</h2>
+                
+                <div class="wrapper">
+                    <div class="service" data-aos="fade-up">
+                        <div class="img">
+                            <img src="./assets/img/icons/globe.svg" alt="world" class="svg">
+                        </div>
+                        <h3>World wide</h3>
+                        <p>
+                            Search the weather of
+                            every place in the world
+                        </p>
+                    </div>
+    
+                    <div class="service" data-aos="fade-up">
+                        <div class="img">
+                            <img src="./assets/img/icons/fast.svg" alt="fast" class="svg">
+                        </div>
+                        <h3>Efficiency</h3>
+                        <p>
+                            We offer the
+                            best and fastest
+                            experience possible
+                        </p>
+                    </div>
+    
+                    <div class="service" data-aos="fade-up">
+                        <div class="img">
+                            <img src="./assets/img/icons/calendar.svg" alt="time option" class="svg">
+                        </div>
+                        <h3>Hourly & Daily</h3>
+                        <p>
+                            With these forecastes
+                            you can be informed 
+                            in the best way
+                        </p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="about" id="about">
+                <div class="app">
+                    <div class="text" data-aos="fade-right">
+                        <h1>
+                            All the information that
+                            <span>you need to know.</span>
+                        </h1>
+                        <h3>
+                            Thanks to our application, you can see all the weather information of the city where you live and your favorite cities.
+                            In particular, you can have access to all the hourly forecastes of the day and of the week.
+                        </h3>
+                    </div>
+    
+                    <div class="app-images" data-aos="fade-left">
+                        <div class="btn-slider">
+                            <div class="btn selected">
+                                <img src="./assets/img/icons/smartphone.svg" alt="phone-icon">
+                            </div>
+                            <div class="btn">
+                                <img src="./assets/img/icons/monitor.svg" alt="desktop-icon">
+                            </div>
+                            
+    
+                            <div class="selected-btn" style="left: 0"></div>
+                        </div>
+    
+                        <img src="" alt="phone" id="app">
+                    </div>
+                </div>
+    
+                <div class="api" id="api">
+                    <img src="./assets/img/landing-page/light-api.png" alt="api" data-aos="fade-right">
+    
+                    <div class="text" data-aos="fade-left">
+                        <h1>
+                            All the data came from
+                            <span>Open Weather’s API.</span>
+                        </h1>
+                        <h3>
+                            They are providing highly recognisable weather products that make working with the weather data a way easier. 
+                            They work with millions of developers, up to the complex enterprise systems.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="end" data-aos="slide-up">
+                <h1>Try FifoWeather now!</h1>
+                <a href="./index.html" target="_blank" rel="noopener noreferrer">andreafifo.github.io/FifoWeather</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <footer>
+                <div class="logo">
+                    <h1>FifoWeather</h1>
+                    <h3>Weather App</h3>
+                </div>
+
+                <div class="socials">
+                    <p>Let's chat</p>
+
+                    <div class="list">
+                        <a class="social" href="https://github.com/AndreaFifo" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/img/icons/social/github.svg" alt="github" class="light">
+                        </a>
+    
+                        <a class="social" href="https://www.instagram.com/im_andreagrazi/" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/img/icons/social/instagram.svg" alt="instagram" class="light">
+                        </a>
+    
+                        <a class="social" href="https://twitter.com/AndreaPokk" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/img/icons/social/twitter.svg" alt="twitter" class="light">
+                        </a>
+    
+                        <a class="social" href="mailto:onofriograziano@zohomail.eu" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/img/icons/social/at-sign.svg" alt="email" class="light">
+                        </a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <script src="./js/cookie.js"></script>
+        <script src="./js/general-script.js"></script>
+        <script src="./js/landing-page.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    </body>
+</html>
